@@ -26,8 +26,9 @@ SECRET_KEY = 'django-insecure-#+klam1v8apb^5o--xyb#z357htn#uq6%(p-5e=-5)b!v_6+ts
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
+CSRF_TRUSTED_ORIGINS = [os.getenv('CSRF_ORIGIN', 'https://sports-academy-u4h5.onrender.com')]
 
 # Application definition
 
