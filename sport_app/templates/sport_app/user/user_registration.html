@@ -5,147 +5,206 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration</title>
-  {% include 'sport_app/common/common_css.html' %}
+  <title>Falcon Sports Academy - Register</title>
+   {% include 'sport_app/common/common_css.html' %}
 
   <style>
-    body,
-    html {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
 
-    .background {
-      /* background: url("{% static 'sport_app/images/tennis.jpg' %}"); */
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      position: relative;
-      height: 100vh;
-      width: 100%;
-      position: relative;
-      overflow: hidden;
-       background: linear-gradient(to right,#103c67, #d9e4ec);
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    .background::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      z-index: 1;
-    }
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f7fb;
+  color: #222;
+  overflow-x: hidden;
+}
 
-    /* .overlay {
 
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(255, 255, 255, 0.2);
-      z-index: 2;
-    } */
+/* ----------- MAIN SECTION ----------- */
+.register-section {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 85vh;
+  padding: 60px 60px 40px;
+  background: linear-gradient(to right, rgba(0, 60, 60, 0.85), rgba(255,255,255,0.1)), url('sports-bg.jpg') center/cover no-repeat;
+  overflow: hidden;
+}
 
-    .register-card {
-      position: relative;
-      z-index: 2;
-      width: 550px;
-      height: 600px;
-      padding: 40px 35px;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      /* border-radius: 20px; */
-      box-shadow: 0 0px 25px rgba(0, 255, 255, 0.2);
-      text-align: center;
-      margin: auto;
-      top: 5%;
-      color: #fff;
-      transition: 0.4s ease;
-    }
 
-    .register-card:hover {
-      box-shadow: 0 0px 35px #a8cac8;
-      transform: scale(1.02);
-    }
+/* 💫 Animated light streak (sporty line) */
+/* .register-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150px;
+  width: 150px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #00bfff, transparent);
+  animation: streak 4s linear infinite;
+  opacity: 0.7;
+  z-index: 3;
+} */
 
-    .register-card h2 {
-      color: burlywood;
-      margin-bottom: 5px;
-      font-size: 46px ;
-      font-weight: 500;
-    }
+/* ----------- LEFT SIDE ----------- */
+.left-side {
+  flex: 1;
+  position: relative;
+  z-index: 4;
+  animation: slideLeft 1.5s ease forwards;
+  opacity: 0;
+}
 
-    .register-card p {
-      color: bisque;
-      font-size: 14px;
-      margin-bottom: 30px;
-      letter-spacing: 3px;
-    }
+.left-side img {
+  width: 100%;
+  height: 630px;
+  object-fit: cover;
+  border-radius: 10px;
+  filter: grayscale(30%);
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+  transition: 0.5s ease;
+}
 
-    .register-card input {
-      width: 100%;
-      padding: 10px;
-      margin: 20px 10;
-      border: none;
-      gap: 10px;
-      border-radius: 10px;
-      outline: none;
-    }
+.left-side img:hover {
+  filter: grayscale(0%) brightness(1.1);
+  transform: scale(1.03);
+  box-shadow: 0 0 40px rgba(3, 124, 66, 0.6);
+}
 
-    .register-card button {
-      width: 100%;
-      padding: 12px;
-      background: #053442;
-      color: #fff;
-      border: none;
-      font-size: 16px;
-      border-radius: 10px;
-      margin-top: 10px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
+/* Text overlay on image */
+.overlay-text {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  /* background: rgba(0,0,0,0.5); */
+  padding: 20px;
+  border-radius: 10px;
+  /* backdrop-filter: blur(4px); */
+}
 
-    .register-card button:hover {
-      background: #1a596a;
-      box-shadow: 0 0 8px #a8cac8;
-    }
+.overlay-text h1 {
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #074329;
+  text-shadow: 0 0 10px rgba(0,191,255,0.6);
+}
 
-    .sign-in {
-      font-size: 40px;
-      color: rgb(26, 26, 101);
-    }
+.overlay-text p {
+  margin-top: 10px;
+  color: #032e36;
+}
+
+/* ----------- RIGHT SIDE (FORM) ----------- */
+.right-side {
+  flex: 1;
+  z-index: 4;
+  background: rgba(255,255,255,0.15);
+  padding: 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 25px rgba(0,0,0,0.3);
+  margin-left: 40px;
+  animation: slideRight 1.5s ease forwards;
+  opacity: 0;
+  border: 2px solid rgb(8, 45, 8);
+}
+
+.right-side h2 {
+  color: #08332b;
+  font-size: 2.0rem;
+  font-weight: bolder;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0,191,255,0.4);
+}
+
+.right-side:hover {
+  filter: grayscale(0%) brightness(1.1);
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(7, 61, 49, 0.6);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  
+}
+
+input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: #d0e0f0;
+}
+
+button {
+  background: linear-gradient(90deg, #689385, #074b2b);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0,191,255,0.6);
+}
+
+/* ----------- ANIMATIONS ----------- */
+@keyframes slideLeft {
+  0% { transform: translateX(-80px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+  0% { transform: translateX(80px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
   </style>
-
 </head>
 
 <body>
+
   <!--nav bar code start -->
 
   {% include 'sport_app/common/header.html' %}
 
   <!--nav bar code end -->
 
-  <div class="main-div">
+  <section class="register-section">
+    <div class="left-side">
+      <img src="{% static 'sport_app/images/login3.jpg' %}" alt="Sports Background">
+      <div class="overlay-text">
+        <h1>Join Falcon Sports Academy</h1>
+        <p>Train. Grow. Compete. Unleash your inner champion.</p>
+      </div>
+    </div>
 
-
-    <!-- <div class="div-form" style="margin-bottom: 80px; margin-top:30px ;"> -->
-    <div class="background">
-
-
-      <div class="register-card">
-        <h2 class="sign-in">Register Now !</h2>
-        <p style="font-size: larger;">Login to Falcon Sports Academy</p>
-        <form action="/user_login/" method="POST">
-          {% csrf_token %}
-
-          <div class="input-group mb-3">
+    <div class="right-side">
+      <h2>Register Now!</h2>
+      <form>
+       <div class="input-group mb-3">
             <input type="email" class="form-control" placeholder="useremail" name="email" required>
           </div>
 
@@ -166,13 +225,14 @@
             <input type="file" class="form-control" id="inputGroupFile02" name="profile_pic" required>
             <label class="input-group-text" for="inputGroupFile02">upload</label>
           </div>
-          <div class="text-center">
+
+        <div class="text-center">
             <button type="button" class="btn-warning" >Submit</button>
 
           </div>
+      </form>
 
-        </form>
-        {% if messages %}
+      {% if messages %}
 
         {% for m in messages %}
 
@@ -184,10 +244,8 @@
         {% endfor %}
 
         {% endif%}
-      </div>
     </div>
-
-  </div>
+  </section>
 
   <!--footer code start-->
 

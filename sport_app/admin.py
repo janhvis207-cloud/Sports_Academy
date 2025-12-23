@@ -20,5 +20,5 @@ admin.site.register(Notice)
 
 
 admin.site.site_header="Sport Admin Dashboard"
-admin.site.site_title="SpreadThe Joy Of Playing"
+admin.site.site_title="Spread The Joy Of Playing"
 admin.site.index_title="Sport Academy"

@@ -5,20 +5,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Badminton</title>
+  <title>Cricket</title>
   {% include 'sport_app/common/common_css.html' %}
 
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #fdfdfd, #ebebeb);
+      background:  rgb(171, 174, 172);
     }
 
-    /* Hero Section */
-    .hero-section {
-      background: url("{% static 'sport_app/images/stunt.jpg' %}") no-repeat center center/cover;
-      height: 80vh;
+    /* Image Section */
+    .image-section {
+      background: url("{% static 'sport_app/images/stadium.webp' %}") no-repeat center center/cover;
+      height: 63vh;
       position: relative;
     }
 
@@ -30,7 +30,7 @@
       align-items: center;
     }
 
-    .hero-text {
+    .image-text {
       color: #fff;
       font-size: 3rem;
       text-align: center;
@@ -55,24 +55,24 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      padding: 30px 50px;
-      gap: 30px;
+      padding: 15px 25px;
+      gap: 1.5rem;
       flex-wrap: wrap;
       background: linear-gradient(to left, #f0f4f8, #d9e4ec, );
       border-radius: 15px;
-      margin: 0 30px;
+      margin: 15px;
     }
 
     .about-text-only {
       flex: 1;
-      max-width: 800px;
+      max-width: 700px;
 
     }
 
     .about-text-only h2 {
-      font-size: 2rem;
+      font-size: 1.5em;
       text-shadow: 1px 1px 3px gray;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
 
     /* .about-img {
@@ -81,8 +81,9 @@
         } */
 
     .about-img img {
-      width: 100%;
-      border-radius: 15px;
+      width: 400px;
+      height: auto;
+      border-radius: 10px;
       filter: grayscale(50%);
       animation: fadeIn 1.5s ease-in;
     }
@@ -98,8 +99,8 @@
     }
 
     .about-text-only p {
-      font-size: 1.1rem;
-      line-height: 1.8;
+      font-size: 1.03em;
+      line-height: 1.4;
       color: #333;
       animation: slideIn 1.5s ease-out;
       text-align: justify;
@@ -138,9 +139,9 @@
       padding: 50px 20px;
       flex-wrap: wrap;
       gap: 20px;
-      background: linear-gradient(to right, #d9e4ec, #103c67);
+      background: linear-gradient(to right, #d9e4ec, #235282);
       border-top: 2px solid #ddd;
-      margin: 0px 30px;
+      margin: 0px 60px;
       border-radius: 10px;
     }
 
@@ -252,7 +253,11 @@
 </head>
 
 <body>
-
+  
+<div style="background-color:  rgb(40, 103, 139) ">
+        <h2 style="text-align: right; margin-right: 20px; color: bisque; font-family: 'Times New Roman', Times, serif;">
+            Where Champions Take Flight.</h2>
+    </div>
   <div class="main-div">
 
     <!--nav bar code start -->
@@ -261,86 +266,95 @@
 
     <!--nav bar code end -->
 
-    <!-- Hero Section -->
-    <section class="hero-section">
+    <!-- Image Section -->
+    <section class="image-section">
       <div class="overlay">
-        <h1 class="hero-text">Cricket <br> The Gentleman's Game</h1>
+        <h1 class="image-text">Badminton <br> Grace in Every Smash</h1>
       </div>
     </section>
 
-    <!-- About Us Section (left text, right image) -->
+    <!-- About Us Section -->
+
+    <!-- section 1 -->
 
     <section class="about-us-flex">
       <div class="about-text-only">
+        <h1>About Badminton🏸</h1>
 
-        <h2>About Badminton🏸</h2>
-        <p>Cricket is more than just a sport — it’s an emotion that echoes in the hearts of millions. From the
-          sound of the ball hitting the bat to the roar of the crowd after a six, <span class="highlight">every moment
-            is
-            electrifying.</span></p>
+        <h2>Play. Learn. Rise.</h2>
+        <p>Badminton isn’t just about hitting a shuttle — it’s about believing in yourself every time you step on the
+          court.
+          It’s fast, exciting, and full of energy — just like you! Each rally tests your focus, strength, and
+          determination, teaching you that improvement comes one shot at a time.</p>
 
-        <p> Originating in England, cricket has grown into a <span class="highlight"> phenomenon</span>, but nowhere is
-          it felt more
-          deeply than in India — where<span class="highlight"> cricket is worshipped</span>, players are heroes, and
-          matches are festivals.
-        </p>
+        <h2>Training at Falcon Sports Academy</h2>
+        <p>At Falcon Sports Academy, we don’t just train players — we inspire future champions. Our coaches guide you
+          step by step,
+          helping you master techniques and discover your full potential. We make learning fun, motivating, and full of
+          encouragement!</p>
+        <p>Here’s what we focus on:</p>
+        <ul type="asterisk">
+          <li style="font-size: 17.1px;">🏸Basics Made Strong: Grip, footwork, and strokes</li>
+          <li style="font-size: 17.1px;">⚡Speed & Agility: Fast reflexes and sharp movements</li>
+          <li style="font-size: 17.1px;">💪🏻Fitness First: Strength, stamina, and flexibility training</li>
+          <li style="font-size: 17.1px;">🧠Winning Mindset: Focus, strategy, and self-confidence</li>
+          <li style="font-size: 17.1px;">🤝Team Spirit: Respect, discipline, and fair play</li>
+        </ul>
 
-        <p>Whether it’s the speed of a T20, the strategy of an ODI, or the grace of a Test match, cricket
-          blends <span class="highlight">power, patience, and precision </span>like no other game.
-          It’s a stage where legends rise, records are broken, and history is made — <span class="highlight">one
-            delivery at a time</span>.
-        </p>
+        <h2>Dream Big. Play Bold.</h2>
 
-        <p> For fans, it's not just about winning — it’s about the spirit of the game, the passion in every
-          shot, and the pride in every jersey.
-          Cricket isn’t played. <span class="highlight">It’s felt. It’s celebrated. It’s lived</span>.</p>
+        <p>At <span class="highlight">Falcon Sports Academy</span>, we believe young players are tomorrow’s champions.
+          Every time you step onto the court, you take a step closer to your dreams.
+          So keep pushing, keep playing, and never stop believing in your power.</p>
+        <p>Because here at Falcon —</p>
+        <p>Your passion takes flight, your dreams take shape, and your game never stops. 🦅</p>
+
+
       </div>
       <div class="about-img">
-        <img src="{% static 'sport_app/images/cricket2.jpg' %}" alt="About Image">
+        <img src="{% static 'sport_app/images/badminton2.jpg' %}" alt="About Image">
       </div>
+
     </section>
 
+
+
+    <hr style="border: 1.1px solid rgb(22, 79, 55);">
+
     <!-- Player + Achievements Section -->
-
-    <section class="bottom-section">
-
+    <section class="bottom-section" style="margin-bottom: 30px; margin-top: 10px;">
       <!-- Featured Players -->
-
       <div class="players-wrapper">
         <h2 class="section-title">Featured Players</h2>
         <div class="players-container">
           <div class="player-card">
-            <img src="{% static 'sport_app/images/virat.jpg' %}" alt="Virat">
-            <p>Virat K - Left hand</p>
+            <img src="{% static 'sport_app/images/prakash.webp' %}" alt="Virat">
+            <p>Prakash Padukone</p>
           </div>
           <div class="player-card">
-            <img src="{% static 'sport_app/images/rohit.jpg' %}" alt="Bumrah">
-            <p>Rohit - Right hand</p>
+            <img src="{% static 'sport_app/images/pv.jfif' %}" alt="Bumrah">
+            <p>PV Sindhu</p>
           </div>
           <div class="player-card">
-            <img src="{% static 'sport_app/images/rohit.jpg' %}" alt="Bumrah">
-            <p>J Bumrah - Right hand</p>
+            <img src="{% static 'sport_app/images/saina.avif' %}" alt="Bumrah">
+            <p>Saina Nehwal</p>
           </div>
           <div class="player-card">
-            <img src="{% static 'sport_app/images/rohit.jpg' %}" alt="Bumrah">
-            <p>J Bumrah - Right hand</p>
+            <img src="{% static 'sport_app/images/kidamb.jfif' %}" alt="Bumrah">
+            <p>Kidambi Srikanth</p>
           </div>
         </div>
       </div>
 
       <!-- Achievements -->
-
       <div class="achievement-card big-achievement">
-        <h2>India's Cricket Achievements</h2>
+        <h2>India's Badminton Achievements</h2>
         <ul>
-          <li>🏆 World Cup Champions</li>
-          <li>📈 Top ranked in T20</li>
-          <li>🔥 Historic Wins</li>
+          <li>🏆numerous World Championship medals (Sindhu's gold, doubles medals)</li>
+          <li>📈 Prakash Padukone: First Indian to win All England Open (1980).</li>
+          <li>🔥 a historic Thomas Cup win (2022)</li>
         </ul>
       </div>
-
-
-
 
 
 

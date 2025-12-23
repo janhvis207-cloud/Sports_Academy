@@ -9,9 +9,13 @@
   {% include 'sport_app/common/common_css.html' %}
 
   <style>
+    body{
+      margin: 0;
+      padding: 0;
+    }
     .heading {
 
-      color: black;
+      color:goldenrod;
       letter-spacing: 2px;
       text-align: center;
       font-size: 50px;
@@ -19,20 +23,11 @@
       /* transition: all 0.3s ease; */
       /* z-index: 5;  */
       font-family: 'Times New Roman', Times, serif;
+  
 
     }
 
-    .heading:hover {
-
-      /* transform: scale(1.5); */
-      color: goldenrod;
-
-    }
-
-    .heading:hover::after {
-      width: 100%;
-      left: 0;
-    }
+    
 
     .bgimg1 {
       background-image: url("{% static 'sport_app/images/background2 copy.jpg' %}");
@@ -52,6 +47,37 @@
       background: rgba(50, 50, 50, 0.5);
       filter: brightness(40%);
     }
+    .admission-box{
+      width: 50vw;
+      max-width: 100%;
+      background: rgba(255,255,255, 0.95);
+      border-radius: 12px;
+      padding: 35px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      box-shadow: 0 0px 25px rgba(0, 255, 255, 0.2);
+      margin-left: auto;
+      margin-right: auto;
+      margin-top:30px ;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .admission-box form{
+      width: 100%;
+    }
+    .admission-box.form-control,
+    .admission-box.form-select{
+      width: 100%;
+    }
+    .container{
+      padding-top: 70px;
+      padding-bottom: 50px;
+    }
+    *{
+      /* outline: 1px solid red; */
+    }
   </style>
 </head>
 
@@ -65,6 +91,8 @@
 
     <!--nav bar code end -->
 
+<section class="container">
+  <div class="admission-box">
     <h1 class="heading">Take Admission</h1>
     <form action="/admission/" method="post" enctype="multipart/form-data">
       {%csrf_token%}
@@ -127,6 +155,10 @@
       </div>
 
     </form>
+    </div>
+    </section>
+
+
   </div>
   <!--footer code start-->
 

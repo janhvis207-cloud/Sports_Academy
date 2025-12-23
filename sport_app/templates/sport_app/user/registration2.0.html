@@ -1,56 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Registration</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-<div class="flex-container">
-
-    <form method="post" action="/registration/" enctype="multipart/form-data">
-        {% csrf_token %}
-
-      <div class="container-fluid d-flex justify-content-end" >
-
-     <div class="w-50" style="margin-bottom: 30px;">
-  
-<div class="form-floating mb-3 " style="margin-top: 30px;">
-  <input type="email" class="form-control" id="floatingInput" placeholder="Email" name="email" required>
-  <label for="floatingInput">Email address</label>
-</div>
-<div class="form-floating mb-3">
-  <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" required>
-  <label for="floatingPassword">Password</label>
-</div>
-<div class="form-floating mb-3">
-  <input type="text" class="form-control" id="floatingInput" placeholder="Name" name="name" required>
-  <label for="floatingInput">Name</label>
-</div>
-<div class="form-floating ">
-  <input type="number" class="form-control" id="floatingInput" placeholder="Phone no." name="phone" required>
-  <label for="floatingInput">Phone no.</label>
-</div>
-<div class="input-group mb-3,text-center p-3">
-  <input type="file" class="form-control" id="inputGroupFile02" name="profile_pic" required>
-  <label class="input-group-text" for="inputGroupFile02">Upload</label>
-</div>
-
-<div class="container-fluid d-flex justify-content-center">
-<button type="submit" class="btn btn-warning"> Submit </button>
-</div>
-</div>
-</div>
-     </form>  
-     </div>   
-     
-<!-- new code will appear -->
-
-
-<!DOCTYPE html>
 {% load static %}
 <html lang="en">
 
@@ -59,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registration</title>
   {% include 'sport_app/common/common_css.html' %}
+
   <style>
     body,
     html {
@@ -69,15 +18,16 @@
     }
 
     .background {
-      background: url("{% static 'sport_app/images/tennis.jpg' %}");
+      /* background: url("{% static 'sport_app/images/tennis.jpg' %}"); */
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
       position: relative;
       height: 100vh;
-      /* width: 100%; */
+      width: 100%;
       position: relative;
       overflow: hidden;
+       background: linear-gradient(to right,#103c67, #d9e4ec);
     }
 
     .background::before {
@@ -91,7 +41,18 @@
       z-index: 1;
     }
 
-    .login-card {
+    /* .overlay {
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.2);
+      z-index: 2;
+    } */
+
+    .register-card {
       position: relative;
       z-index: 2;
       width: 550px;
@@ -100,32 +61,35 @@
       background: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(12px);
       border: 1px solid rgba(255, 255, 255, 0.3);
-      border-radius: 20px;
+      /* border-radius: 20px; */
       box-shadow: 0 0px 25px rgba(0, 255, 255, 0.2);
       text-align: center;
       margin: auto;
-      top: 10%;
+      top: 5%;
       color: #fff;
       transition: 0.4s ease;
     }
 
-    .login-card:hover {
+    .register-card:hover {
       box-shadow: 0 0px 35px #a8cac8;
       transform: scale(1.02);
     }
 
-    .login-card h2 {
+    .register-card h2 {
       color: burlywood;
       margin-bottom: 5px;
+      font-size: 46px ;
+      font-weight: 500;
     }
 
-    .login-card p {
+    .register-card p {
       color: bisque;
       font-size: 14px;
       margin-bottom: 30px;
+      letter-spacing: 3px;
     }
 
-    .login-card input {
+    .register-card input {
       width: 100%;
       padding: 10px;
       margin: 20px 10;
@@ -135,7 +99,7 @@
       outline: none;
     }
 
-    .login-card button {
+    .register-card button {
       width: 100%;
       padding: 12px;
       background: #053442;
@@ -148,7 +112,7 @@
       transition: background 0.3s ease;
     }
 
-    .login-card button:hover {
+    .register-card button:hover {
       background: #1a596a;
       box-shadow: 0 0 8px #a8cac8;
     }
@@ -158,9 +122,10 @@
       color: rgb(26, 26, 101);
     }
   </style>
+
 </head>
 
-<body class="bgimg1">
+<body>
   <!--nav bar code start -->
 
   {% include 'sport_app/common/header.html' %}
@@ -169,68 +134,70 @@
 
   <div class="main-div">
 
+
+    <!-- <div class="div-form" style="margin-bottom: 80px; margin-top:30px ;"> -->
     <div class="background">
 
 
-      <div class="login-card">
-        <h2 class="sign-in">Register Now</h2>
-        <p style="font-size: larger;">Register to Falcon Sports Academy</p>
+      <div class="register-card">
+        <h2 class="sign-in">Register Now !</h2>
+        <p style="font-size: larger;">Login to Falcon Sports Academy</p>
         <form action="/user_login/" method="POST">
           {% csrf_token %}
 
-          <!-- <div class="input-group mb-3">
-            <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
-            <input type="email" class="form-control" placeholder="Username" name="email" required>
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" placeholder="useremail" name="email" required>
           </div>
 
 
           <div class="input-group mb-3">
-            <span class="input-group-text"><i class="fa-solid fa-lock-open"></i></span>
-            <input type="password" class="form-control" placeholder="Userpassword" name="password" required>
+            <input type="password" class="form-control" placeholder="userpassword" name="password" required>
+          </div>
+
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="full name" name="name" required>
+          </div>
+
+          <div class="input-group mb-3">
+            <input type="number" class="form-control" placeholder="phone no." name="phone" required>
+          </div>
+
+          <div class="input-group mb-3,text-center">
+            <input type="file" class="form-control" id="inputGroupFile02" name="profile_pic" required>
+            <label class="input-group-text" for="inputGroupFile02">upload</label>
           </div>
           <div class="text-center">
-            <button class="btn btn-warning">Submit</button>
+            <button type="button" class="btn-warning" >Submit</button>
 
-          </div> -->
-          <div class="form-floating mb-3 " style="margin-top: 30px;">
-  <input type="email" class="form-control" id="floatingInput" placeholder="Email" name="email" required>
-  <label for="floatingInput">Email address</label>
-</div>
-<div class="form-floating mb-3">
-  <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password" required>
-  <label for="floatingPassword">Password</label>
-</div>
-<div class="form-floating mb-3">
-  <input type="text" class="form-control" id="floatingInput" placeholder="Name" name="name" required>
-  <label for="floatingInput">Name</label>
-</div>
-<div class="form-floating ">
-  <input type="number" class="form-control" id="floatingInput" placeholder="Phone no." name="phone" required>
-  <label for="floatingInput">Phone no.</label>
-</div>
-<div class="input-group mb-3,text-center p-3">
-  <input type="file" class="form-control" id="inputGroupFile02" name="profile_pic" required>
-  <label class="input-group-text" for="inputGroupFile02">Upload</label>
-</div>
-
-<div class="container-fluid d-flex justify-content-center">
-<button type="submit" class="btn btn-warning"> Submit </button>
-</div>
-</div>
-</div>
+          </div>
 
         </form>
+        {% if messages %}
+
+        {% for m in messages %}
+
+        <div class="alert alert-danger alert-dismissible fade show" role="alert"
+          style="width: 50%;margin: auto;text-align: center;">
+          <strong>{{m}}</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
+        {% endfor %}
+
+        {% endif%}
       </div>
+    </div>
 
-</div>
-      <div class="container-fluid" style="background-color: rgb(11, 22, 65); margin-top: 20px;">
-        <!--footer code start-->
+  </div>
 
-        {% include 'sport_app/common/footer.html' %}
+  <!--footer code start-->
 
-        <!--footer code end-->
-      </div>
+  {% include 'sport_app/common/footer.html' %}
+
+  <!--footer code end-->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 
 </body>
 

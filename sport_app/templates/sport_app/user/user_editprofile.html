@@ -49,13 +49,15 @@
 </head>
 
 <body>
-<div class="main-div">
+<!-- <div class="main-div"> -->
 
 <!--nav bar code start -->
 
      {% include 'sport_app/user/user_header.html'  %}
 
     <!--nav bar code end -->
+
+<div class="main-div">
 
     <form action="/user_editprofile/" method="post" enctype="multipart/form-data">
         {% csrf_token %}

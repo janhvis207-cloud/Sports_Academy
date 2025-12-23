@@ -12,13 +12,13 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to right, #fdfdfd, #ebebeb);
+      background:  rgb(171, 174, 172);
     }
 
-    /* Hero Section */
-    .hero-section {
-      background: url("{% static 'sport_app/images/stunt.jpg' %}") no-repeat center center/cover;
-      height: 80vh;
+    /* Image Section */
+    .image-section {
+      background: url("{% static 'sport_app/images/stadium.webp' %}") no-repeat center center/cover;
+      height: 63vh;
       position: relative;
     }
 
@@ -30,8 +30,8 @@
       align-items: center;
     }
 
-    .hero-text {
-      color: #fff;
+    .image-text {
+      color:#f0f4f8;
       font-size: 3rem;
       text-align: center;
       animation: slideDown 2s ease-in-out;
@@ -55,24 +55,24 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      padding: 30px 50px;
-      gap: 30px;
+      padding: 15px 25px;
+      gap: 1.5rem;
       flex-wrap: wrap;
       background: linear-gradient(to left, #f0f4f8, #d9e4ec, );
       border-radius: 15px;
-      margin: 0 30px;
+      margin: 15px;
     }
 
     .about-text-only {
       flex: 1;
-      max-width: 800px;
+      max-width: 700px;
 
     }
 
     .about-text-only h2 {
-      font-size: 2rem;
+      font-size: 1.5em;
       text-shadow: 1px 1px 3px gray;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
 
     /* .about-img {
@@ -81,8 +81,9 @@
         } */
 
     .about-img img {
-      width: 100%;
-      border-radius: 15px;
+      width: 400px;
+      height: auto;
+      border-radius: 10px;
       filter: grayscale(50%);
       animation: fadeIn 1.5s ease-in;
     }
@@ -98,8 +99,8 @@
     }
 
     .about-text-only p {
-      font-size: 1.1rem;
-      line-height: 1.8;
+      font-size: 1.03em;
+      line-height: 1.4;
       color: #333;
       animation: slideIn 1.5s ease-out;
       text-align: justify;
@@ -138,9 +139,9 @@
       padding: 50px 20px;
       flex-wrap: wrap;
       gap: 20px;
-      background: linear-gradient(to right, #d9e4ec, #103c67);
+      background: linear-gradient(to right, #d9e4ec, #235282);
       border-top: 2px solid #ddd;
-      margin: 0px 30px;
+      margin: 0px 60px;
       border-radius: 10px;
     }
 
@@ -163,17 +164,7 @@
       flex-wrap: wrap;
     }
 
-    /* .player-card {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 200px;
-            transition: transform 0.4s ease;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-        } */
+    
 
     .player-card img {
       width: 160px;
@@ -252,7 +243,10 @@
 </head>
 
 <body>
-
+<div style="background-color:  rgb(40, 103, 139)">
+        <h2 style="text-align: right; margin-right: 20px; color: bisque; font-family: 'Times New Roman', Times, serif;">
+            Where Champions Take Flight.</h2>
+    </div>
   <div class="main-div">
 
     <!--nav bar code start -->
@@ -261,97 +255,93 @@
 
     <!--nav bar code end -->
 
-    <!-- Hero Section -->
-    <section class="hero-section">
+    <!-- Image Section -->
+    <section class="image-section">
       <div class="overlay">
-        <h1 class="hero-text">Cricket <br> The Gentleman's Game</h1>
+        <h1 class="image-text">Football <br> Where Every Kick Matters</h1>
       </div>
     </section>
 
-    <!-- About Us Section (left text, right image) -->
+    <!-- About Us Section -->
+
+    <!-- section 1 -->
+
     <section class="about-us-flex">
       <div class="about-text-only">
-        <h2>About Cricket</h2>
-        <p>Cricket is more than just a sport — it’s an emotion that echoes in the hearts of millions. From the
-          sound of the ball hitting the bat to the roar of the crowd after a six, <span class="highlight">every moment
-            is
-            electrifying.</span></p>
+        <h1>About Football</h1>
 
-        <p> Originating in England, cricket has grown into a <span class="highlight"> phenomenon</span>, but nowhere is
-          it felt more
-          deeply than in India — where<span class="highlight"> cricket is worshipped</span>, players are heroes, and
-          matches are festivals.
-        </p>
+        <h2>The Game of Heart and Hustle</h2>
+        <p>Football is more than just a game — it’s a feeling of passion, teamwork, and unstoppable energy.
+          Every kick, pass, and goal tells a story of effort and determination. It teaches you to never give up, to
+          trust your team, and to fight till the final whistle blows.</p>
 
-        <p>Whether it’s the speed of a T20, the strategy of an ODI, or the grace of a Test match, cricket
-          blends <span class="highlight">power, patience, and precision </span>like no other game.
-          It’s a stage where legends rise, records are broken, and history is made — <span class="highlight">one
-            delivery at a time</span>.
-        </p>
+        <h2>Why Young Players Love Football</h2>
+        <p>Football is a sport that builds not just your body, but your character. It teaches teamwork, discipline,
+          and focus, while keeping you active and strong. Every training session helps you move faster, think sharper,
+          and play smarter.</p>
+        <p>It’s not about who scores the most — it’s about how hard you work for every goal and how much you grow with
+          every match.</p>
 
-        <p> For fans, it's not just about winning — it’s about the spirit of the game, the passion in every
-          shot, and the pride in every jersey.
-          Cricket isn’t played. <span class="highlight">It’s felt. It’s celebrated. It’s lived</span>.</p>
+        <h2>Football Training at Falcon Sports Academy</h2>
+        <p>At Falcon Sports Academy, we train young players to play with skill, strength, and spirit.
+          Our football program focuses on helping every player improve, whether you’re just starting out or aiming for
+          competitive excellence. </p>
+        <p> Our coaches bring out the best in every player through:</p>
+        <ul type="asterisk">
+          <li style="font-size: 17.1px;">⚽ Skill Training: Dribbling, passing, shooting, and ball control</li>
+          <li style="font-size: 17.1px;">💪 Fitness & Conditioning: Speed, strength, and endurance drills</li>
+          <li style="font-size: 17.1px;">🧠 Tactical Awareness: Understanding formations, teamwork, and positioning</li>
+          <li style="font-size: 17.1px;">🎯 Mental Growth: Focus, decision-making, and leadership </li>
+          <li style="font-size: 17.1px;">🤝 Team Spirit: Playing fair, supporting others, and growing together</li>
+        </ul>
+
+        <h2>Our Facilities</h2>
+        <p>We offer well-maintained football fields, professional-grade equipment, and a motivating environment
+          designed to help young players train safely and effectively. From friendly matches to guided sessions, every
+          moment on the field helps you become faster, stronger, and smarter.</p>
       </div>
       <div class="about-img">
-        <img src="{% static 'sport_app/images/cricket2.jpg' %}" alt="About Image">
+        <img src="{% static 'sport_app/images/football1.jpg' %}" alt="About Image">
       </div>
     </section>
 
+
+    <hr style="border: 1.1px solid rgb(22, 79, 55);">
+
     <!-- Player + Achievements Section -->
-    <section class="bottom-section">
+    <section class="bottom-section" style="margin-bottom: 30px; margin-top: 10px;">
       <!-- Featured Players -->
       <div class="players-wrapper">
         <h2 class="section-title">Featured Players</h2>
         <div class="players-container">
           <div class="player-card">
-            <img src="{% static 'sport_app/images/virat.jpg' %}" alt="Virat">
-            <p>Virat K - Left hand</p>
+            <img src="{% static 'sport_app/images/sunil chetri.jpg' %}" alt="Virat">
+            <p>Sunil Chetri</p>
           </div>
           <div class="player-card">
-            <img src="{% static 'sport_app/images/rohit.jpg' %}" alt="Bumrah">
-            <p>Rohit - Right hand</p>
+            <img src="{% static 'sport_app/images/ronaldo.jpg' %}" alt="Bumrah">
+            <p>Christiano Ronaldo</p>
           </div>
           <div class="player-card">
-            <img src="{% static 'sport_app/images/rohit.jpg' %}" alt="Bumrah">
-            <p>J Bumrah - Right hand</p>
+            <img src="{% static 'sport_app/images/gurpreet.jpg' %}" alt="Bumrah">
+            <p>Gurpreet Singh Sindhu</p>
           </div>
           <div class="player-card">
-            <img src="{% static 'sport_app/images/rohit.jpg' %}" alt="Bumrah">
-            <p>J Bumrah - Right hand</p>
+            <img src="{% static 'sport_app/images/messi.jfif' %}" alt="Bumrah">
+            <p>Lionel Messi</p>
           </div>
         </div>
       </div>
 
       <!-- Achievements -->
       <div class="achievement-card big-achievement">
-        <h2>India's Cricket Achievements</h2>
+        <h2>India's Football Achievements</h2>
         <ul>
-          <li>🏆 World Cup Champions</li>
-          <li>📈 Top ranked in T20</li>
-          <li>🔥 Historic Wins</li>
+          <li>🏆winning Asian Games Gold (1951, 1962)</li>
+          <li>📈 reaching Olympic Semis (1956)</li>
+          <li>🔥 AFC Asian Cup: Runners-up in 1964</li>
         </ul>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

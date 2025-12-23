@@ -12,13 +12,14 @@
         body {
             margin: 0;
             font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(to right, #fdfdfd, #ebebeb);
+            /* background: linear-gradient(to right, #fdfdfd, #ebebeb); */
+            background:  rgb(171, 174, 172);
         }
 
-        /* Hero Section */
-        .hero-section {
-            background: url("{% static 'sport_app/images/stunt.jpg' %}") no-repeat center center/cover;
-            height: 80vh;
+        /* Image Section */
+        .image-section {
+            background: url("{% static 'sport_app/images/stadium.webp' %}") no-repeat center center/cover;
+            height: 63vh;
             position: relative;
         }
 
@@ -30,7 +31,7 @@
             align-items: center;
         }
 
-        .hero-text {
+        .image-text {
             color: #fff;
             font-size: 3rem;
             text-align: center;
@@ -55,24 +56,24 @@
             display: flex;
             justify-content: space-around;
             align-items: center;
-            padding: 30px 50px;
-            gap: 30px;
+            padding: 15px 25px;
+            gap: 1.5rem;
             flex-wrap: wrap;
             background: linear-gradient(to left, #f0f4f8, #d9e4ec, );
             border-radius: 15px;
-            margin: 0 30px;
+            margin: 15px;
         }
 
         .about-text-only {
             flex: 1;
-            max-width: 800px;
-            
+            max-width: 700px;
+
         }
 
         .about-text-only h2 {
-            font-size: 2rem;
+            font-size: 1.5em;
             text-shadow: 1px 1px 3px gray;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
         /* .about-img {
@@ -81,40 +82,43 @@
         } */
 
         .about-img img {
-            width: 100%;
-            border-radius: 15px;
+            width: 400px;
+            height: auto;
+            border-radius: 10px;
             filter: grayscale(50%);
             animation: fadeIn 1.5s ease-in;
         }
+
         .highlight {
-  color: #0077cc;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
+            color: #0077cc;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
 
-.highlight:hover {
-  color: #0e3f62 ;
-}
+        .highlight:hover {
+            color: #0e3f62;
+        }
 
-.about-text-only p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #333;
-  animation: slideIn 1.5s ease-out;
-  text-align: justify;
-}
+        .about-text-only p {
+            font-size: 1.03em;
+            line-height: 1.4;
+            color: #333;
+            animation: slideIn 1.5s ease-out;
+            text-align: justify;
+        }
 
-/* Optional: Add this keyframe for slide-in */
-@keyframes slideIn {
-  0% {
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
+        /* Optional: Add this keyframe for slide-in */
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-50px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
 
         @keyframes fadeIn {
             from {
@@ -136,9 +140,9 @@
             padding: 50px 20px;
             flex-wrap: wrap;
             gap: 20px;
-            background: linear-gradient(to right, #d9e4ec,#103c67);
+            background: linear-gradient(to right, #d9e4ec, #4a625b);
             border-top: 2px solid #ddd;
-            margin: 0px 30px;
+            margin: 0px 60px;
             border-radius: 10px;
         }
 
@@ -195,7 +199,7 @@
 
         /* Achievements Card */
         .achievement-card {
-            background:#fff;
+            background: #fff;
             padding: 10px;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -205,7 +209,7 @@
             min-height: 350px;
             margin-right: 70px;
             margin-top: 50px;
-            
+
         }
 
         .big-achievement {
@@ -213,7 +217,7 @@
         }
 
         .achievement-card:hover {
-            background:#aaa;
+            background: #aaa;
             transform: translateY(-10px);
         }
 
@@ -250,6 +254,10 @@
 </head>
 
 <body>
+<div style="background-color:  rgb(40, 103, 139)">
+        <h2 style="text-align: right; margin-right: 20px; color: bisque; font-family: 'Times New Roman', Times, serif;">
+            Where Champions Take Flight.</h2>
+    </div>
 
     <div class="main-div">
 
@@ -259,41 +267,64 @@
 
         <!--nav bar code end -->
 
-        <!-- Hero Section -->
-        <section class="hero-section">
+        <!-- Image Section -->
+        <section class="image-section">
             <div class="overlay">
-                <h1 class="hero-text">Cricket <br> The Gentleman's Game</h1>
+                <h1 class="image-text">Cricket <br> The Gentleman's Game</h1>
             </div>
         </section>
 
-        <!-- About Us Section (left text, right image) -->
+        <!-- About Us Section -->
+
+        <!-- section 1 -->
+
         <section class="about-us-flex">
             <div class="about-text-only">
-                <h2>About Cricket</h2>
-                <p>Cricket is more than just a sport — it’s an emotion that echoes in the hearts of millions. From the
-                    sound of the ball hitting the bat to the roar of the crowd after a six, <span class="highlight">every moment is
-                    electrifying.</span></p>
-
-                <p> Originating in England, cricket has grown into a <span  class="highlight"> phenomenon</span>, but nowhere is it felt more
-                    deeply than in India — where<span  class="highlight"> cricket is worshipped</span>, players are heroes, and matches are festivals.
+                <h2>About Cricket🏏</h2>
+                <p>Cricket is one of the most loved and widely played sports around the world. Known as a gentleman’s
+                    game,
+                    it teaches patience, teamwork, strategy, and discipline. It’s a perfect blend of skill, strength,
+                    and focus, making it a great sport for building character and confidence both on and off the field.
                 </p>
 
-                <p>Whether it’s the speed of a T20, the strategy of an ODI, or the grace of a Test match, cricket
-                    blends <span  class="highlight">power, patience, and precision </span>like no other game.
-                    It’s a stage where legends rise, records are broken, and history is made — <span  class="highlight">one delivery at a time</span>.
+                <h2>Cricket at Falcon Sports Academy</h2>
+                <p>At <span class="highlight">Falcon Sports Academy</span>, we are dedicated to nurturing young
+                    cricketers and guiding them toward excellence.
+                    Whether you’re a beginner learning the basics or an aspiring professional, our cricket training
+                    program helps every player reach their true potential with the right mix of technique, fitness, and
+                    mindset.
                 </p>
 
-                <p> For fans, it's not just about winning — it’s about the spirit of the game, the passion in every
-                    shot, and the pride in every jersey.
-                    Cricket isn’t played. <span  class="highlight">It’s felt. It’s celebrated. It’s lived</span>.</p>
+                <h2>What We Focus On</h2>
+                <p>Our expert coaches ensure a complete learning experience by focusing on:</p>
+                <ul type="asterisk">
+                    <li style="font-size: 17.1px;">🏏Batting Skills: Grip, stance, timing, and shot selection</li>
+                    <li style="font-size: 17.1px;">🎯Bowling Techniques: Line, length, swing, and spin control</li>
+                    <li style="font-size: 17.1px;">🧤Fielding & Wicketkeeping: Catching, throwing accuracy, and reflex
+                        improvement</li>
+                    <li style="font-size: 17.1px;">💪🏻Fitness & Conditioning: Strength, agility, and endurance training
+                    </li>
+                    <li style="font-size: 17.1px;">🧠Game Awareness: Strategy, teamwork, and decision-making under
+                        pressure</li>
+                </ul>
+
+                <h2>Facilities & Environment</h2>
+                <p>We offer professional turf and practice nets, modern training equipment, and a safe, encouraging
+                    environment for players
+                    to train and improve. Regular practice matches and skill sessions help players gain real-game
+                    experience and confidence.</p>
             </div>
             <div class="about-img">
                 <img src="{% static 'sport_app/images/cricket2.jpg' %}" alt="About Image">
             </div>
         </section>
 
+
+
+        <hr style="border: 1.1px solid rgb(22, 79, 55);">
+
         <!-- Player + Achievements Section -->
-        <section class="bottom-section">
+        <section class="bottom-section" style="margin-bottom: 30px; margin-top: 10px;">
             <!-- Featured Players -->
             <div class="players-wrapper">
                 <h2 class="section-title">Featured Players</h2>
@@ -326,26 +357,6 @@
                     <li>🔥 Historic Wins</li>
                 </ul>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
